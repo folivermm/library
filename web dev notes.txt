@@ -1,0 +1,25 @@
+HTML element
+A component of an HTML document
+HTML tag
+Keywords that define how content in an HTML document appears on a web page
+HTML paragraph
+A block of content, such as text, that is represented by a <p> element
+HTML heading
+A title or subtitle used to break up, organize, and highlight content on a web page
+HTML attribute
+An extra bit of information that is tied with certain elements and is written inside an opening tag
+Alternative text
+Also called alt text, an image description that can be added as an image attribute in an HTML document
+
+CSS rule
+Also called a ruleset, the entire block of CSS code assigned to style an HTML element
+CSS selector
+Code that identifies what HTML element should be affected by the declaration block that follows the selector
+CSS property
+The general category or type of stylistic change that you'd like to make
+CSS value
+The specific change that you want to make, such as pixel size or color
+CSS declaration
+The property and value applied to the selector
+Hex color code
+Also called hex value, an alphanumeric code used to specify a color value
