@@ -39,9 +39,32 @@ function getMostCommonGenres(books) {
   return bookGenre.slice(0, 5);
 }
 
-function getMostPopularBooks(books) {}
+function getMostPopularBooks(books) {
+  return books
+    .map((book) => {
+      return { name: book.title, count: book.borrows.length };
+    })
+    .sort((a, b) => (b.count > a.count ? 1 : -1))
+    .slice(0, 5);
+}
 
-function getMostPopularAuthors(books, authors) {}
+function getMostPopularAuthors(books, authors) {
+  let objA = {};
+  books.forEach((book) => {
+    const authorId = book.authorId;
+    if (objA[authorId]) {
+      objA[authorId] += book.borrows.length;
+    } else {
+      objA[authorId] = book.borrows.length;
+    }
+  });
+  const authorData = authors.map((author) => ({
+    name: `${author.name.first} ${author.name.last}`,
+    count: objA[author.id] || 0,
+  }));
+  authorData.sort((a, b) => b.count - a.count);
+  return authorData.slice(0, 5);
+}
 
 module.exports = {
   getTotalBooksCount,
