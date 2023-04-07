@@ -48,15 +48,19 @@ function getMostPopularBooks(books) {
     .slice(0, 5);
 }
 
+function callAuth(authTally, book) {
+  if (authTally) {
+    authTally += book.borrows.length;
+  } else {
+    authTally = book.borrows.length;
+  }
+  return authTally;
+}
 function getMostPopularAuthors(books, authors) {
   let objA = {};
   books.forEach((book) => {
     const authorId = book.authorId;
-    if (objA[authorId]) {
-      objA[authorId] += book.borrows.length;
-    } else {
-      objA[authorId] = book.borrows.length;
-    }
+    objA[authorId] = callAuth(objA[authorId], book);
   });
   const authorData = authors.map((author) => ({
     name: `${author.name.first} ${author.name.last}`,
