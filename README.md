@@ -35,7 +35,7 @@ This local library application is designed to assist users in managing their boo
 
 - **Stats by Account**: Offers insights into the lending and borrowing activities of library accounts, including the books they've borrowed, returned, and their lending history.
 
-## Achievements
+## Highlights and Achievements
 
 Throughout the development of this project, we've achieved the following milestones:
 
